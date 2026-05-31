@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Price Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>💰 Crypto Price Tracker</h1>
+
+    <table>
+        <tr>
+            <th>Coin</th>
+            <th>Price ($)</th>
+        </tr>
+
+        {% for coin in coins %}
+        <tr>
+            <td>{{ coin.name }}</td>
+            <td>{{ coin.current_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
